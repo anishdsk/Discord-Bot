@@ -1,8 +1,10 @@
 import os
 import discord
 import random
+from joke_generator import generate # 'pip install joke-generator'
 from dotenv import load_dotenv
 from discord.ext import commands
+
 
 # loads env variables
 load_dotenv()
@@ -34,7 +36,7 @@ async def on_member_join(member):
 @bot.command(name='Hi', help='Responds with a greeting message')
 async def message_hi(ctx):
     # lists of responses to choose from
-    greetings_responses = ['Hi', 'Hello', 'Greetings']
+    greetings_responses = [f'Hi :)', 'Hello There ( ͡° ͜ʖ ͡°)', 'Greetings ( ͡ᵔ ͜ʖ ͡ᵔ )']
 
     response = random.choice(greetings_responses)
     await ctx.send(response)
@@ -42,10 +44,16 @@ async def message_hi(ctx):
 @bot.command(name='Hello', help='Responds with a greeting message')
 async def message_hi(ctx):
     # lists of responses to choose from
-    greetings_responses = ['Hi', 'Hello', 'Greetings']
+    greetings_responses = ['Hi :)', 'Hello There ( ͡° ͜ʖ ͡°)', 'Greetings ( ͡ᵔ ͜ʖ ͡ᵔ )']
 
     response = random.choice(greetings_responses)
     await ctx.send(response)
+
+# tells a random joke
+@bot.command(name='Joke', help='Responds with a random joke')
+async def message_joke(ctx):
+    joke_response = str(generate())
+    await ctx.send(joke_response)
 
 # simulates a dice roll
 @bot.command('roll_dice', help='Simulation of dice roll; type in # of dice & # of sides per die after command. Ex: !dice_roll 2 3')
