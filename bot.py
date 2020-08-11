@@ -34,6 +34,22 @@ bot = commands.Bot(command_prefix='!')
 async def on_ready():
     print(f'{bot.user.name} has connected to Discord!')
 
+# to join channel of the caller of '!join'
+@bot.command(help='Type "!join" for the bot to join your current channel')
+async def join(ctx):
+    if ctx.author.voice:
+        await ctx.author.voice.channel.connect() # This will error if the bot doesn't have sufficient permissions
+    else:
+        await ctx.send("You're not connected to a channel at the moment.")
+
+# to leave channel of the caller of '!leave'
+@bot.command(help='Type "!leave" for the bot to leave your current channel')
+async def leave(ctx):
+    if ctx.guild.voice_client.is_connected(): # Checking that they're in a vc
+        await ctx.guild.voice_client.disconnect()
+    else:
+        await ctx.send("Sorry, I'm not connected to a voice channel at the moment.")
+
 # event handler for new member join coroutine
 @bot.event
 async def on_member_join(member):
