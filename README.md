@@ -1,1 +1,3 @@
 # Multipurpose-Discord-Bot
+
+# Capabilities:
