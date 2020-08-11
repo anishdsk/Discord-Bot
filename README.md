@@ -1,6 +1,6 @@
 # Multipurpose-Discord-Bot
 
-CAPABILITES:
+ # CAPABILITES:
     - Welcome messages
     - Hello/Hi messages
     - Displaying GIFs/memes
