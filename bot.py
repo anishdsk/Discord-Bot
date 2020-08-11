@@ -1,24 +1,34 @@
 import os
 import discord
 import random
+import logging
+import giphy_client
+from giphy_client.rest import ApiException
+from pprint import pprint
 from joke_generator import generate # 'pip install joke-generator'
 from dotenv import load_dotenv
 from discord.ext import commands
-
+from discord.ext.commands import Bot
+import logger_and_helper_functions as lhf
 
 # loads env variables
 load_dotenv()
-# get discord token to allow access to API
+
+# get Discord and GIPHY tokens to access their APIs
 '''
-Token subject to change. If you want to use this repo as a template to create
-your Discord Bot, after creating a Discord Application/Bot on the Discord
-Developer Portal, take the Token given when the Bot was created and replace
-the old token with your token in the '.env' file.
+Tokens subject to change. If you want to use this repo as a template to create
+your Discord Bot, create a Discord Application/Bot on the Discord
+Developer Portal and register to get an API key on the GIPHY Developer Portal.
+Then take the tokens given from when the Bot was created and from GIPHY and
+replace the old tokens with your new tokens in the '.env' file.
 '''
 TOKEN = os.getenv('DISCORD_TOKEN')
+giphy_token = os.getenv('GIPHY_TOKEN')
+
 # Creates Discord Bot. To invoke this bot, text commands towards it must be prefixed with '!'
 bot = commands.Bot(command_prefix='!')
 
+''' Bot events and commands '''
 # event handler for when connection is established
 @bot.event
 async def on_ready():
@@ -32,7 +42,7 @@ async def on_member_join(member):
         f'{member.name}, welcome to my Discord server!'
     )
 
-# event handler for when interaction with the bot occurs
+# event handler for when interaction with the bot occurs (for simple greetings)
 @bot.command(name='Hi', help='Responds with a greeting message')
 async def message_hi(ctx):
     # lists of responses to choose from
@@ -41,8 +51,9 @@ async def message_hi(ctx):
     response = random.choice(greetings_responses)
     await ctx.send(response)
 
+# event handler for when interaction with the bot occurs (for simple greetings)
 @bot.command(name='Hello', help='Responds with a greeting message')
-async def message_hi(ctx):
+async def message_hello(ctx):
     # lists of responses to choose from
     greetings_responses = ['Hi :)', 'Hello There ( ͡° ͜ʖ ͡°)', 'Greetings ( ͡ᵔ ͜ʖ ͡ᵔ )']
 
@@ -64,6 +75,12 @@ async def roll(ctx, numOfDice: int, numOfSides: int):
     ]
     await ctx.send(', '.join(dice))
 
+# displays a gif related to user inputted keyword
+@bot.command(name='ShowGif', help='Type !ShowGif "GIF related keyword"')
+async def show_gif(ctx, keyword):
+    gif = await lhf.search_gifs(keyword)
+    await ctx.send('Gif URL : ' + gif)
+
 # only gives those with the server Admin ('admin') role to create new channels
 @bot.command(name='create-channel', help='Type !create-channel "channel name"')
 @commands.has_role('admin')
@@ -81,4 +98,5 @@ async def on_command_error(ctx, error):
     if isinstance(error, commands.errors.CheckFailure):
         await ctx.send('You do not have the role to execute this command.')
 
+lhf.logging_service() #logging
 bot.run(TOKEN)
