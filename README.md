@@ -1,1 +1,1 @@
-# Discord-Bot
+# Multipurpose-Discord-Bot
