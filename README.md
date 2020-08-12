@@ -51,7 +51,7 @@
     - For the full list of commands go to the server and type in '!help'
     - '!help' will bring up a list of all commands, how to invoke them, and their descriptions
     
-    - As actions on the server happen and as your bot connects to the server and runs commands, these will be logged in the autoamtically created 'discord.log' file
+    - As actions on the server happen and as your bot connects to the server and runs commands, these will be logged in the automatically created 'discord.log' file
     - They will be saved in that file so you can view that history whenever
     
     - Since the bot is not hosted anywhere, it only runs as long as the program is running in the background
