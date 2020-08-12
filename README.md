@@ -6,7 +6,7 @@
     - Displays GIFs/memes
     - Cracks Jokes
     - Simulates dice rolls
-    - Logs bot and server activites to an external .log file
+    - Logs bot and server activites to a seperate .log file
     - Restricts channel creation to only those with 'admin' roles
 
 ## Prerequisites:
