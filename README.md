@@ -54,13 +54,13 @@
     - As actions on the server happen and as your bot connects to the server and runs commands, these will be logged in the automatically created 'discord.log' file
     - They will be saved in that file so you can view that history whenever
     
-    - Since the bot is not hosted anywhere, it only runs as long as the program is running in the background
+    - Since the bot is not hosted anywhere at the moment, it only runs as long as the program is running in the background
     
 ## Side Note:
     - If your bot is already running and you make any changes to the code, before you compile and run make sure you regenerate a new bot token and replace the old one in the           '.env' file. This makes sure that you don't have multiple instances of the bot running under the same token. This avoids duplicate actions/responses by the bot on the           server for a given command
     
 ## Future Plans:
-    - Make Logging more readable 
+    - Hosting -> so bot is constantly available
     - Advanced chatting features
     - Music streaming capability
     
