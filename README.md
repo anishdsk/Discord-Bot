@@ -45,7 +45,24 @@
 
 ## Running the Bot:
     - Make sure all files are in the same folder
-    - The 'Discord.log' file should be deleted as your process will generate a new one as the program runs
+    - The 'discord.log' file should be deleted as your process will generate a new one as the program runs
+    - Have the 'bot.py' file running now, in the background, and go to the server with the bot and start using the bot
+    - The bot's commands must be prefixed with '!'. Like '!Hello' or '!Joke' and multiple more
+    - For the full list of commands go to the server and type in '!help'
+    - '!help' will bring up a list of all commands, how to invoke them, and their descriptions
+    
+    - As actions on the server happen and as your bot connects to the server and runs commands, these will be logged in the autoamtically created 'discord.log' file
+    - They will be saved in that file so you can view that history whenever
+    
+    - Since the bot is not hosted anywhere, it only runs as long as the program is running in the background
+    
+## Side Note:
+    - If your bot is already running and you make any changes to the code, before you compile and run make sure you regenerate a new bot token and replace the old one in the           '.env' file. This makes sure that you don't have multiple instances of the bot running under the same token. This avoids duplicate actions/responses by the bot on the           server for a given command
+    
+## Future Plans:
+    - Make Logging more readable 
+    - Advanced chatting features
+    - Music streaming capability
     
 
     
