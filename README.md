@@ -2,7 +2,7 @@
 
  # Capabilites:
     - Welcome messages
-    - Greetings
+    - Basic chatting
     - Displaying GIFs/memes
     - Cracking Jokes
     - Simulating dice rolls
