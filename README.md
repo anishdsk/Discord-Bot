@@ -61,7 +61,7 @@
     - If your bot is already running and you make any changes to the code, before you compile and run make sure you generate a new Bot token and replace the old one
     - This makes sure that you don't have multiple instances of the bot running under the same token. This avoids duplicate responses by the bot on the server for any command
     
-## Future Plans:
+## Future Updates:
     - Hosting -> so bot is constantly available
     - Advanced chatting features
     - Music streaming capability
