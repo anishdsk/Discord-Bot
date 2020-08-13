@@ -1,6 +1,6 @@
 # Multipurpose-Discord-Bot
 
- ## Capabilites:
+ ## Features:
     - Basic chatting
     - Direct welcome messages when a member joins server
     - Displays GIFs/memes
