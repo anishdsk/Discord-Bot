@@ -14,7 +14,7 @@
     - Create a Discord account
    
     - Create an Application in the Discord Developer Portal
-          - <https://discord.com/login?redirect_to=%2Fdevelopers>
+          - https://discord.com/login?redirect_to=%2Fdevelopers
     - Now Create a Bot under that Application in the portal
     - Create a Discord Server/Guild where will your bot will go to work
     
