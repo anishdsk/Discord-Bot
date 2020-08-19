@@ -14,7 +14,6 @@
     - Create a Discord account
    
     - Create an Application in the Discord Developer Portal
-          - https://discord.com/login?redirect_to=%2Fdevelopers
     - Now Create a Bot under that Application in the portal
     - Create a Discord Server/Guild where will your bot will go to work
     
@@ -27,8 +26,7 @@
           - Then authorize your guild from the drop down menu
           - Your bot will now have been added to your guild/server
           
-    - Register on the GIPHY Developer Portal and create a new application. 
-          - https://developers.giphy.com/
+    - Register on the GIPHY Developer Portal and create a new application
     - Then select an API Key. Not SDK. Then an API key will be given
     
     - Generate a token on the Bot page on the Discord Developer Portal
