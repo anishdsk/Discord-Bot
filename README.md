@@ -28,7 +28,7 @@
           - Your bot will now have been added to your guild/server
           
     - Register on the GIPHY Developer Portal and create a new application. 
-          - __https://developers.giphy.com/__
+          - https://developers.giphy.com/
     - Then select an API Key. Not SDK. Then an API key will be given
     
     - Generate a token on the Bot page on the Discord Developer Portal
