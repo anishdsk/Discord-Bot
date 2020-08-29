@@ -35,7 +35,7 @@
     - Set the value 'DISCORD_TOKEN' equal to your Bot Token
     - Set the value 'GIPHY_TOKEN' equal to your GIPHY API Key
     
-## Dependencies (use Pip to install):
+## Dependencies (use pip to install):
     - "pip install discord.py"
     - "pip install giphy_client"
     - "pip install random"
