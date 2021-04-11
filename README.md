@@ -45,7 +45,6 @@
 
 ## Running the Bot:
     - Make sure all files are in the same folder
-    - The 'discord.log' file should be deleted as your process will generate a new one as the program runs
     - Have the 'bot.py' file running now and go to the server with the bot and start using the bot
     
     - The bot's commands must be prefixed with '!'. Like '!Hello' or '!Joke' and multiple more
