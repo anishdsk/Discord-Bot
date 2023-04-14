@@ -1,4 +1,4 @@
-# Multipurpose-Discord-Bot
+# Discord-Bot
 
  ## Features:
     - Basic chatting
